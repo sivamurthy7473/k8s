@@ -10,6 +10,7 @@ spec:
       ports:
         - containerPort: 80
     - name: nginx-1
-      image: nginx:latest
-      ports:
-        - containerPort: 80
+      image: nginx
+      args:
+        - sleep
+        - 1d
