@@ -1,7 +1,7 @@
 ---
 apiVersion:	v1
 kind:	Pod
-metadata:
+metadata: 
   name: devops
 spec:
   containers:
@@ -10,7 +10,7 @@ spec:
       ports:
         - containerPort: 80
     - name: nginx-1
-      image: nginx
+      image: nginx:latest
       args:
         - sleep
         - 1d
@@ -21,7 +21,7 @@ metadata:
   name: devops-1
 spec:
   containers:
-    - name: nginx
+    - name: nginx3
       image: nginx:latest
       ports:
         - containerPort: 80
@@ -32,7 +32,7 @@ metadata:
   name: devops-2
 spec:
   containers:
-    - name: nginx
+    - name: nginx4
       image: nginx:latest
       ports:
         - containerPort: 80 
@@ -43,7 +43,7 @@ metadata:
   name: devops-3
 spec:
   containers:
-    - name: nginx
+    - name: nginx5
       image: nginx:latest
       ports:
         - containerPort: 80
@@ -54,7 +54,7 @@ metadata:
   name: devops-4
 spec:
   containers:
-    - name: nginx
+    - name: nginx6
       image: nginx:latest
       ports:
         - containerPort: 80      
@@ -65,7 +65,7 @@ metadata:
   name: devops-5
 spec:
   containers:
-    - name: nginx
+    - name: nginx6
       image: nginx:latest
       ports:
         - containerPort: 80
