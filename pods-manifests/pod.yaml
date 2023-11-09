@@ -14,3 +14,58 @@ spec:
       args:
         - sleep
         - 1d
+---
+apiVersion:	v1
+kind:	Pod
+metadata:
+  name: devops-1
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+---
+apiVersion:	v1
+kind:	Pod
+metadata:
+  name: devops-2
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80 
+---
+apiVersion:	v1
+kind:	Pod
+metadata:
+  name: devops-3
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+ ---
+apiVersion:	v1
+kind:	Pod
+metadata:
+  name: devops-4
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80      
+ ---
+apiVersion:	v1
+kind:	Pod
+metadata:
+  name: devops-5
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
