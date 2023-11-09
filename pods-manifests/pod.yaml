@@ -11,6 +11,5 @@ spec:
         - containerPort: 80
     - name: nginx-1
       image: nginx:latest
-      args:
-        - sleep
-        - 10s 
+      ports:
+        - containerPort: 80
