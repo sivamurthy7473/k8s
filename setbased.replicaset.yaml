@@ -37,6 +37,6 @@ spec:
     dev: app
   type: NodePort
   ports:
-    - port: 80,8080
+    - port: 80
       targetPort: 80
       
