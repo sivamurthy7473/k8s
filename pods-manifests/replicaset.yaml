@@ -1,0 +1,93 @@
+
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-2
+  labels:
+    pro: k8spro
+spec:
+  minReadySeconds: 2
+  replicas: 3 
+  selector:
+    matchLabels:
+      pro: k8spro
+  template:
+    metadata:
+      name: labels
+      labels:
+        pro: k8spro
+    spec:
+      containers:
+        - name: replicas
+          image: nginx
+          ports:
+            - containerPort: 80
+
+            practice purpose for pod
+
+---
+apiVersion: v1
+kind: pod
+metadata:
+  labels: 
+    name: pod-item
+spec: 
+  containers:
+    - name:
+      image:
+      ports:
+       - container: 80
+          practice for replicaset
+
+---
+apiversion: replicaset
+kind: apps/v1
+metadate:
+  labels:
+    name: replicas-item
+spec: 
+  minReadySeconds: 2
+  replicas: 2
+  selector:
+    name: replicas-item
+  template:
+    metadata:
+      name: replicas-item
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports: 
+            - container port: 80  
+
+          replicaset controller
+---
+apiversion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: replicas-item
+spec: 
+  minReadySeconds: 4
+  replicas: 3
+  selector:
+    name: replicas-item
+  template:  
+    metadata:
+      labels:
+        name: replicas-item
+    spec:
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins 
+          ports:
+            - container port: 8080
+          args:
+            - sleep
+            - 1d
+                                
+
+
+
+
