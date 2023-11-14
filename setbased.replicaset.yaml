@@ -20,11 +20,11 @@ spec:
           ports:
             - name: app-nginx
               containerPort: 80
-        - name: nginx-1
-          image: nginx
+        - name: jenkins
+          image: jenkins
           ports:
-            - name: app-nginx-1
-              containerPort: 80
+            - name: jenkins
+              containerPort: 8080
 
 
 ---
