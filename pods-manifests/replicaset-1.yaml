@@ -6,7 +6,6 @@ metadata:
 spec:
   minReadySeconds: 1
   selector:
-    matchExpressions:
       - key: dev
         operator: In
         values:
@@ -22,7 +21,6 @@ spec:
   template:
     metadata:
       labels:
-        dev: app
         prod: app-version
     spec:
       containers:
