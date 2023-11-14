@@ -20,6 +20,11 @@ spec:
           ports:
             - name: app-nginx
               containerPort: 80
+        - name: nginx-1
+          image: nginx
+          ports:
+            - name: app-nginx-1
+              containerPort: 80
 
 
 ---
@@ -33,5 +38,5 @@ spec:
   type: NodePort
   ports:
     - port: 80
-      targetPort: app-nginx
+      targetPort: 80
       
