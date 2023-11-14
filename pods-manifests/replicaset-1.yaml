@@ -4,7 +4,7 @@ kind: ReplicaSet
 metadata:
   name: jenkins
 spec:
-  minReadySceonds: 1
+  minReadySeconds: 1
   selector:
     matchExpressions:
       - key: dev
