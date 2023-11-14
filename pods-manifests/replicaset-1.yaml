@@ -27,10 +27,10 @@ spec:
     spec:
       containers:
         - name: jenkins
-          image: nginx
+          image: jenkins/jenkins
           ports:
             - name: local
-              containerPort: 80
+              containerPort: 8080
 
 
 ---
@@ -44,6 +44,6 @@ spec:
     prod: app-version
   type: NodePort
   ports:
-    - port: 80
+    - port: 8080
       targetPort: local
-      nodePort: 32000
+     

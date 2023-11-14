@@ -48,7 +48,7 @@ metadate:
     name: replicas-item
 spec: 
   minReadySeconds: 2
-  replicas: 2
+  replicas: 1
   selector:
     name: replicas-item
   template:
