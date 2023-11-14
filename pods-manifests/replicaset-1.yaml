@@ -23,7 +23,7 @@ spec:
     metadata:
       labels:
         dev: app
-        prod: webapp
+        prod: app-version
     spec:
       containers:
         - name: jenkins
