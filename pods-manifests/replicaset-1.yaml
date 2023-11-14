@@ -41,7 +41,7 @@ metadata:
 spec:
   selector:
     dev: app
-    prod: appversion
+    prod: app-version
   type: NodePort
   ports:
     - port: 8080
