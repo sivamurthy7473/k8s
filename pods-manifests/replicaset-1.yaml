@@ -46,4 +46,4 @@ spec:
   ports:
     - port: 80
       targetPort: local
-      nodePort: 31000
+      nodePort: 32000
