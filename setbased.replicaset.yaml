@@ -31,5 +31,5 @@ spec:
   type: NodePort
   ports:
     - port: 80
-      targetPort: nginx
+      targetPort: 80
       nodePort: 31000
