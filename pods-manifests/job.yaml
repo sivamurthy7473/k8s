@@ -16,7 +16,7 @@ spec:
         - name: nginx
           image: nginx  
           ports:
-            - containerport: 80
+            - containerPort: 80
 ---
 apiversion: batch/v1
 kind: cronjob
@@ -37,4 +37,4 @@ spec:
         - name: jenkins
           image: jenkins/jenkins
           ports:
-            - containerport:8080                 
+            - containerPort:8080                 
