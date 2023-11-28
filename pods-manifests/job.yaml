@@ -19,7 +19,7 @@ spec:
             - containerPort: 80
 ---
 apiversion: batch/v1
-kind: cronjob
+kind: Cronjob
 metadata:
   name: cronjob
   labeles:
