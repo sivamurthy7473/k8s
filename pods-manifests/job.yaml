@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: Job
+  lables:
+    app: nginx
+  namespace: devops 
+spec:
+  template:
+    metadata:
+      labels:
+        prepod: devops
+    spec:
+      restartPolicy: OnFailure 
+      containers:
+        - name: nginx
+          image: nginx  
+          ports:
+            - containerport: 80
+---
+apiversion: batch/v1
+kind: cronjob
+metadata:
+  name: cronjob
+  labeles:
+    app: jenkins
+  namespace: qa
+spec:
+  schedule: '* * * * *'
+  jobTemplate:
+    metadata:
+      labels:
+        preprod: devops
+    spec:
+      restartpolicy: OnFailure
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins
+          ports:
+            - containerport:8080                 
