@@ -32,7 +32,7 @@ spec:
       labels:
         preprod: devops
     spec:
-      restartpolicy: OnFailure
+      restartpolicy: Always
       containers:
         - name: jenkins
           image: jenkins/jenkins
