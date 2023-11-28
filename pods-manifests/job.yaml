@@ -2,8 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: job
-  lables:
-    app: devops
+  labels:
+    app: de
   namespace: devops 
 spec:
   template:
@@ -23,7 +23,7 @@ kind: cronjob
 metadata:
   name: cronjob
   labeles:
-    app: devops
+    app: jenkins
   namespace: qa
 spec:
   schedule: '* * * * *'
