@@ -10,6 +10,8 @@ spec:
     spec: 
       containers:
          - image: alpine
+           potrts:
+             - containerport: 2342
            command:
             - sleep
             - 10s
