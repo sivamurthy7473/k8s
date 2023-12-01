@@ -1,40 +1,17 @@
+---
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job
-  labels:
-    app: de
-  namespace: devops 
+  name: hellojob
 spec:
   template:
     metadata:
-      labels:
-        prepod: devops
-    spec:
-      restartPolicy: OnFailure 
+      name: jobpod
+    spec: 
       containers:
-        - name: nginx
-          image: nginx  
-          ports:
-            - containerPort: 80
----
-apiVersion: batch/v1
-kind: CronJob
-metadata:
-  name: cronjob
-  labeles:
-    app: jenkins
-  namespace: qa
-spec:
-  schedule: '* * * * *'
-  jobTemplate:
-    metadata:
-      labels:
-        preprod: devops
-    spec:
-      restartpolicy: Always
-      containers:
-        - name: jenkins
-          image: jenkins/jenkins
-          ports:
-            - containerPort: 8080                 
+         - image: alpine
+           command:
+            - sleep
+            - 10s
+
+                 
